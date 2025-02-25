@@ -7,13 +7,11 @@ from PIL import Image
 
 def Calculations():
     # Read in excel sheet
-    df = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='Season2')
+    df = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='Season4')
 
     race_points = [col for col in df.columns if col.endswith('Points')]
     race_place = [col for col in df.columns if col.endswith('Place')]
     races = [col[:-6] for col in race_points]
-
-    drivers = df['Driver']
 
     df['Total'] = 0
     for i in range(len(race_points)):
@@ -52,18 +50,18 @@ def Calculations():
     # Driver colors
     driver_colors = {
         'Nick': 'darkorange', 
-        'Gary': 'orange',
-        'Del': 'black',
-        'Boz': 'darkgray',
+        'Travis': 'orange',
+        'Patrick': 'blue',
+        'Brently': 'lightblue',
         'Erick': 'red',
-        'David': '#ff6060',
+        'Del': '#ff6060',
         'Joshua': 'hotpink',
         'Eddie': 'lightpink',
-        'Zane': 'darkblue',
-        'Marcus': '#8888c9',
-        'Josh': 'IndianRed',
-        'Yeti': 'Maroon',
-        'Travis': 'LightSlateGray',
+        'Yeti': 'darkblue',
+        'Boz': '#8888c9',
+        'Newman': 'LightSlateGray',
+        'Gary': 'black',
+        'Zane': 'black'
     } 
 
     for i in range(len(race_place)):
@@ -96,11 +94,11 @@ def Calculations():
                                 line=dict(color=team_colors.get(team))))
 
     fig1.update_layout(
-        # xaxis_range=[0,index],
+        xaxis_range=[0,index],
         xaxis_title="Race",
         yaxis_title="Total Points",
         title="Constructor's Championship",
-        hovermode="x unified"  # Enhanced hover mode for better readability
+        hovermode="x unified" 
     )
 
     # --- Driver Plot ---
@@ -120,11 +118,11 @@ def Calculations():
                                 line=dict(color=driver_colors.get(driver))))
 
     fig2.update_layout(
-        # xaxis_range=[0,index],
+        xaxis_range=[0,index],
         xaxis_title="Race",
         yaxis_title="Total Points",
         title="Driver's Championship",
-        hovermode="x unified"  # Enhanced hover mode for better readability
+        hovermode="x unified" 
     )
 
     # Creates a list of all the points columns in the excel sheet

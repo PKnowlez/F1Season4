@@ -32,11 +32,7 @@ tabs = st.tabs([
 
 # League News
 with tabs[0]:
-    # Tab0_LeagueNews.Tab0()
-    st.subheader('Season 2 Historical Archive')
-    st.markdown('''
-                The information on this site is a recreation of the data housed in EA's Racenet app for this season.
-                ''')
+    Tab0_LeagueNews.Tab0()
 
 # Standings
 with tabs[1]:
