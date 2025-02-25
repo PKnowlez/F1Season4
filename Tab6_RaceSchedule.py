@@ -6,7 +6,7 @@ import math
 from PIL import Image
 
 def Tab6():
-    schedule = pd.read_excel('F124_season.xlsx', sheet_name='Schedule')
+    schedule = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='S2Schedule')
     
     # CSS to inject contained in a string
     hide_table_row_index = """

@@ -8,11 +8,11 @@ from PIL import Image
 def Tab1(team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,new_df,drivers_total_points,
          driver_colors):
     totals = team_race_totals.T
-    constructor_sorted = totals.sort_values('COTAPoints', ascending=False)
+    constructor_sorted = totals.sort_values(totals.columns[-1], ascending=False)
     constructor_sorted = constructor_sorted.reset_index() 
     constructor_totals = pd.DataFrame({
     'Team': constructor_sorted['Team'],
-    'Points': [f"{points:.1f}" for points in constructor_sorted['COTAPoints']],
+    'Points': [f"{points:.1f}" for points in constructor_sorted[constructor_sorted.columns[-1]]],
     })
 
     totals = driver_race_totals.T
@@ -20,7 +20,7 @@ def Tab1(team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,new_
     driver_sorted = driver_sorted.reset_index() 
     driver_totals = pd.DataFrame({
     'Driver': driver_sorted['Driver'],
-    'Points': [f"{points:.1f}" for points in driver_sorted['COTAPoints']],
+    'Points': [f"{points:.1f}" for points in driver_sorted[driver_sorted.columns[-1]]],
     })
 
     # Creates a list of all the points columns in the excel sheet

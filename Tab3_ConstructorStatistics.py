@@ -69,7 +69,7 @@ def Tab3(team_df,team_races_points_only,index_x,drivers_points_df,colors_driver_
                 globals()[fig_name].update_yaxes(title_text="Points")
 
                 # Update layout
-                globals()[fig_name].update_layout(xaxis_range=[-0.5,index_x], showlegend=False)
+                # globals()[fig_name].update_layout(xaxis_range=[-0.5,index_x], showlegend=False)
 
                 # Calculates the highest placement a driver has achieved
                 highest_score = max(team_points)

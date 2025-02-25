@@ -7,20 +7,11 @@ from PIL import Image
 
 def Calculations():
     # Read in excel sheet
-    df = pd.read_excel('F124_season.xlsx', sheet_name='PythonReadyData')
+    df = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='Season2')
 
-    race_points = ['SuzukaPoints','SilverstonePoints','AustraliaPoints', 
-                    'SpaPoints','SpainPoints','ChinaSprintPoints','ChinaPoints', 
-                    'BakuPoints','CanadaPoints','MonzaPoints','Abu DhabiPoints', 
-                    'AustriaSprintPoints','AustriaPoints','COTASprintPoints','COTAPoints']
-    race_place = ['SuzukaPlace','SilverstonePlace','AustraliaPlace', 
-                    'SpaPlace','SpainPlace','ChinaSprintPlace','ChinaPlace', 
-                    'BakuPlace','CanadaPlace','MonzaPlace','Abu DhabiPlace', 
-                    'AustriaSprintPlace','AustriaPlace','COTASprintPlace','COTAPlace']
-    races = ['Suzuka','Silverstone','Australia', 
-                    'Spa','Spain','China (S)','China', 
-                    'Baku','Canada','Monza','Abu Dhabi', 
-                    'Austria (S)','Austria','COTA (S)','COTA']
+    race_points = [col for col in df.columns if col.endswith('Points')]
+    race_place = [col for col in df.columns if col.endswith('Place')]
+    races = [col[:-6] for col in race_points]
 
     drivers = df['Driver']
 
@@ -51,24 +42,38 @@ def Calculations():
         'Ferrari': 'red',
         'McLaren': 'darkorange',
         'Red Bull': 'darkblue',
-        'VCARB': 'blue'
-    }
+        'VCARB': 'blue',
+        'AlphaTauri': 'LightSlateGray',
+        'Alfa Romeo': 'Maroon',
+        'Mercedes': 'black',
+        'Haas': 'gray',
+    }  
 
     # Driver colors
-    color_list = ['darkorange','orange','blue','skyblue','red','teal','#ff6060','pink','hotpink','darkblue',
-                  '#8888c9','#84c1c1','teal','teal']
-    driver_colors = {}  # Initialize an empty dictionary
-    for i, driver in enumerate(drivers.unique()):
-        driver_colors[driver] = color_list[i % len(color_list)]
+    driver_colors = {
+        'Nick': 'darkorange', 
+        'Gary': 'orange',
+        'Del': 'black',
+        'Boz': 'darkgray',
+        'Erick': 'red',
+        'David': '#ff6060',
+        'Joshua': 'hotpink',
+        'Eddie': 'lightpink',
+        'Zane': 'darkblue',
+        'Marcus': '#8888c9',
+        'Josh': 'IndianRed',
+        'Yeti': 'Maroon',
+        'Travis': 'LightSlateGray',
+    } 
 
     for i in range(len(race_place)):
         if df.loc[0,race_points[i]] == 0:
             index = i
             index_x = index-0.5
             break
-        elif race_place[i] == 'COTAPlace':
+        elif race_place[i] == race_place[-1]:
             index = i+1
-            index_x = index-0.5
+            index_x = index
         else:
             x = 0
 
@@ -91,7 +96,7 @@ def Calculations():
                                 line=dict(color=team_colors.get(team))))
 
     fig1.update_layout(
-        xaxis_range=[0,index],
+        # xaxis_range=[0,index],
         xaxis_title="Race",
         yaxis_title="Total Points",
         title="Constructor's Championship",
@@ -115,7 +120,7 @@ def Calculations():
                                 line=dict(color=driver_colors.get(driver))))
 
     fig2.update_layout(
-        xaxis_range=[0,index],
+        # xaxis_range=[0,index],
         xaxis_title="Race",
         yaxis_title="Total Points",
         title="Driver's Championship",
