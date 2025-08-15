@@ -54,7 +54,7 @@ def Tab5(new_df,average_changed,drivers_total_points,average_qualifying,average_
     # Unique colors
     colors = [
         '#FFD700', '#C0C0C0', '#CD7F32', '#0068c9', '#0068c9', '#0068c9', '#0068c9', 
-        '#0068c9', '#0068c9', '#0068c9', '#0068c9', '#0068c9', '#0068c9'
+        '#0068c9', '#0068c9', '#0068c9', '#0068c9', '#0068c9', '#0068c9', '#0068c9'
     ]
     
     globals()[fig_name5] = px.bar(

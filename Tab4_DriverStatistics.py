@@ -9,7 +9,7 @@ from PIL import Image
 # Expands for each driver: Race results bar graph, highest finish, number of wins, 
 #   number of podiums, total points, fastest laps total, average qualifying,
 #   average place, qualifying vs finsih graph, qualyfing vs finish average
-def Tab4(colors,index_x,new_df,new_df_FL,new_df_Q,new_df_Place,races_points_only):
+def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only):
     # Variables for loop
     total_points = []
     average_changed = []
@@ -206,7 +206,7 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_Q,new_df_Place,races_points_only
             # Create full average positions gained/lost list
             average_changed.append(driver_changedN)
 
-            # Calculates the number of fastest laps a driver has earned
+            # Calculates the number of pole positions a driver has earned
             pole_positions_count = 0
             for value in driver_qualifying:
                 if value == 1:
@@ -215,6 +215,32 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_Q,new_df_Place,races_points_only
             # Sets the value to be displayed for number of pole positions
             button_key9 = button_key8 + "_" + str(i)
             pole_positions = 'Pole Positions: ' + str(pole_positions_count)
+
+            # Calculates the number of Driver of the Day awards a driver has earned
+            driver_DOTD = new_df_DOTD.iloc[i, 1:].tolist()
+            count_DOTD = 0
+            for value in driver_DOTD:
+                if value == 'Y':
+                    count_DOTD += 1
+                elif value == 'y':
+                    count_DOTD += 1
+            
+            # Sets the value to be displayed for Driver Fastest Lap
+            button_key10 = button_key9 + "_" + str(i)
+            DOTD = 'Driver of the Day Award: ' + str(count_DOTD)
+
+            # Calculates the number of Driver of the Day awards a driver has earned
+            driver_MOT = new_df_MOT.iloc[i, 1:].tolist()
+            count_MOT = 0
+            for value in driver_MOT:
+                if value == 'Y':
+                    count_MOT += 1
+                elif value == 'y':
+                    count_MOT += 1
+            
+            # Sets the value to be displayed for Driver Fastest Lap
+            button_key11 = button_key10 + "_" + str(i)
+            MOT = 'Most Overtakes Award: ' + str(count_MOT)
 
             # Creates the layout for each expand
             col1, col2, col3, col4 = st.columns(4)
@@ -235,15 +261,19 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_Q,new_df_Place,races_points_only
                 st.button(driver_changed,key=button_key8)
             with col8:
                 st.button(pole_positions,key=button_key9)
-            col9,colN = st.columns(2)
+            col9,col10, col11, col12 = st.columns(4)
             with col9:
-                st.button(best_finish,key=button_key)
-            col10, col11, col12 = st.columns(3)
+                st.button(DOTD,key=button_key10)
             with col10:
-                st.plotly_chart(globals()[fig_name])
+                st.button(MOT,key=button_key11)
             with col11:
+                st.button(best_finish,key=button_key)
+            col13, col14, col15 = st.columns(3)
+            with col13:
+                st.plotly_chart(globals()[fig_name])
+            with col14:
                 st.plotly_chart(globals()[fig_name2])
-            with col12:
+            with col15:
                 st.plotly_chart(globals()[fig_name3])
     
     return new_df,average_changed,average_qualifying,average_place

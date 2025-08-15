@@ -49,19 +49,20 @@ def Calculations():
 
     # Driver colors
     driver_colors = {
+        'Joshua': 'hotpink',
+        'Eddie': 'lightpink',
         'Nick': 'darkorange', 
         'Travis': 'orange',
         'Patrick': 'blue',
-        'Brently': 'lightblue',
+        'Josh': 'lightblue',
+        'Brently': 'darkblue',
+        'Matthew': '#8888c9',
+        'Del': 'teal',
+        'Boz': '#01C79E',
         'Erick': 'red',
-        'Del': '#ff6060',
-        'Joshua': 'hotpink',
-        'Eddie': 'lightpink',
-        'Yeti': 'darkblue',
-        'Boz': '#8888c9',
-        'Newman': 'LightSlateGray',
-        'Gary': 'black',
-        'Zane': 'black'
+        'Leo': '#ff6060',
+        'Jayden': 'black',
+        'Jairo': 'darkgray'
     } 
 
     for i in range(len(race_place)):
@@ -128,6 +129,8 @@ def Calculations():
     # Creates a list of all the points columns in the excel sheet
     points_columns = [col for col in df.columns if col.endswith(('Points', 'SprintPoints'))]
     fastest_lap_columns = [col for col in df.columns if col.endswith(('FastestLap'))]
+    DOTD_columns = [col for col in df.columns if col.endswith(('DOTD'))]
+    MOT_columns = [col for col in df.columns if col.endswith(('MOT'))]
     qualifying_columns = [col for col in df.columns if col.endswith(('Qualifying'))]
     place_columns = [col for col in df.columns if col.endswith(('Place'))]
 
@@ -142,6 +145,14 @@ def Calculations():
     # Creates a new dataframe with only the drivers and fastest laps columns
     new_df_FL = df.set_index('Driver')[fastest_lap_columns]
     new_df_FL = new_df_FL.reset_index()
+
+    # Creates a new dataframe with only the drivers and driver of the day columns
+    new_df_DOTD = df.set_index('Driver')[DOTD_columns]
+    new_df_DOTD = new_df_DOTD.reset_index()
+
+    # Creates a new dataframe with only the drivers and most overtake columns
+    new_df_MOT = df.set_index('Driver')[MOT_columns]
+    new_df_MOT = new_df_MOT.reset_index()
 
     # Creates a new dataframe with only the drivers and qualifying columns
     new_df_Q = df.set_index('Driver')[qualifying_columns]
@@ -158,4 +169,4 @@ def Calculations():
         drivers_total_points.append(total_pointsN)
 
     return team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,race_place,race_points,index_x, \
-        new_df,new_df_FL,new_df_Q,new_df_Place,races_points_only,drivers_total_points,driver_colors
+        new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only,drivers_total_points,driver_colors

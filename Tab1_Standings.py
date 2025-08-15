@@ -16,7 +16,7 @@ def Tab1(team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,new_
     })
 
     totals = driver_race_totals.T
-    driver_sorted = totals.sort_values('COTAPoints', ascending=False)
+    driver_sorted = totals.sort_values('ImolaPoints', ascending=False)
     driver_sorted = driver_sorted.reset_index() 
     driver_totals = pd.DataFrame({
     'Driver': driver_sorted['Driver'],
