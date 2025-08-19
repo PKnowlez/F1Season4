@@ -8,8 +8,8 @@ import Tab0_LeagueNews, Tab1_Standings, Tab2_RaceResults, Tab3_ConstructorStatis
     Tab5_DriverComparison, Tab6_RaceSchedule, Calculations
 
 # Calculations
-team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,race_place,race_points,index_x, \
-new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only,drivers_total_points,driver_colors \
+team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,fig3,race_place,race_points,index_x, \
+new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only,drivers_total_points,driver_colors,rookies \
     = Calculations.Calculations()
 
 ## ----- App Format ----- ##
@@ -56,7 +56,7 @@ with tabs[4]:
 
 # Driver Comparisons
 with tabs[5]:
-    Tab5_DriverComparison.Tab5(new_df,average_changed,drivers_total_points,average_qualifying,average_place)
+    Tab5_DriverComparison.Tab5(new_df,average_changed,drivers_total_points,average_qualifying,average_place,fig3,rookies)
 
 # Race Schedule  
 with tabs[6]:
