@@ -1,33 +1,16 @@
-import pandas as pd
 import streamlit as st
-import plotly.graph_objects as go
-import plotly.express as px
-import math
-import base64
 from streamlit_carousel import carousel
-from PIL import Image
-
-# Images
-australia_circuit = Image.open("./Images/Australia_Circuit.png")
-spa_circuit = Image.open("./Images/Spa_Circuit.png")
-spain_circuit = Image.open("./Images/Spain_Circuit.png")
-china_circuit = Image.open("./Images/China_Circuit.png")
-baku_circuit = Image.open("./Images/Baku_Circuit.png")
-canada_circuit = Image.open("./Images/Canada_Circuit.png")
-abu_dhabi_circuit = Image.open("./Images/Abu_Dhabi_Circuit.png")
-austria_circuit = Image.open("./Images/Austria_Circuit.png")
-cota_circuit = Image.open("./Images/COTA_Circuit.png")
+from Articles import season4_track_overview, season4_schedule_reveal, season4_trophy_reveal, season4_track_tier_list, \
+                season4_track_rankings, season4_ROTY_award
 
 def Tab0():
     if 'show_all_content' not in st.session_state:
         st.session_state.show_all_content = False
 
     #region --
-    st.markdown('''
-                <p style="color:lightgray;">DAY XX/YY/ZZZ - AUTHOR</p>
-                ''',
-                unsafe_allow_html=True,)
-    st.divider()
+
+    season4_ROTY_award.article()
+
     #endregion
     
     # ----------------------------------------------------------------------------------------------------------
@@ -42,10 +25,102 @@ def Tab0():
             st.rerun()
 
     if st.session_state.show_all_content:
-        #region --
-        st.markdown('''
-                <p style="color:lightgray;">DAY XX/YY/ZZZ - AUTHOR</p>
-                ''',
-                unsafe_allow_html=True,)
+        
+        season4_track_rankings.article()
+        
+        season4_track_tier_list.article()
+
+        season4_trophy_reveal.article()
+
+        season4_schedule_reveal.article()
+
+        season4_track_overview.article()
+       
+        #region Driver Announcements
+        st.subheader("Season 4 Driver Lineup")
+        driver_announcements = [
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Driver_Lineup.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Alpine_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/McLaren_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Red_Bull_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/VCARB_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Intern_1.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Intern_2.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Aston_Martin_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Ferrari_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Mercedes_Driver_Post.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Tracks_1.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Tracks_2.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Tracks_3.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Tracks_4.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Tracks_5.png"
+            },
+            {
+                "title": "",
+                "text": "",
+                "img": "./Images/Tracks_6.png"
+        },
+        ]
+
+        carousel(items=driver_announcements, interval=20000)
         st.divider()
         #endregion
