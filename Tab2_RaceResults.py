@@ -7,6 +7,126 @@ from PIL import Image
 
 # Expands for each race: Reports race results like post race screen
 def Tab2(races,df,race_place,race_points):
+    with st.expander('Preseason: Silverstone'):
+        preseason = {
+            "Place":    ['1','2','3','4','5','6','7','8','9','10','11','12','DNF','DNF/S'],
+            "Driver":   [
+                'Jayden',
+                'Joshua',
+                'Del',
+                'Nick',
+                'Jairo',
+                'Patrick',
+                'Eddie',
+                'Brently',
+                'Travis',
+                'Matthew',
+                'Erick',
+                'Josh',
+                'Leo',
+                'Boz'
+            ],
+            "Team": [
+                'Mercedes',
+                'Alpine',
+                'Aston Martin',
+                'McLaren',
+                'Mercedes',
+                'VCARB',
+                'Alpine',
+                'Red Bull',
+                'McLaren',
+                'Red Bull',
+                'Ferrari',
+                'VCARB',
+                'Ferrari',
+                'Aston Martin'
+            ],
+            "Qualifying": [
+                '3',
+                '1',
+                '5',
+                '2',
+                '9',
+                '4',
+                '7',
+                '6',
+                '12',
+                '11',
+                '8',
+                '10',
+                '14',
+                '13'
+            ],
+            "Fastest Lap": [
+                'Yes',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No'
+            ],
+            "Driver of the Day": [
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'Yes',
+                'No',
+                'No',
+                'No',
+                'No'
+            ],
+            "Most Over Takes": [
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'Yes',
+                'No',
+                'No'
+            ],
+            "Cleanest Driver": [
+                'No',
+                'No',
+                'Yes',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No',
+                'No'
+            ]
+        }
+
+        preseason_df = pd.DataFrame(preseason)
+        st.table(preseason_df)     
+
     for i in range(len(races)):
         if i == 0:
             x = 0

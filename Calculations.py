@@ -5,6 +5,8 @@ import plotly.express as px
 import math
 from PIL import Image
 
+# TODO Calculate and return new_df_CD for Cleanest Driver totals per driver
+
 def Calculations():
     # Read in excel sheet
     df = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='Season4')

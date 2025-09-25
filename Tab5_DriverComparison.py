@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+# TODO add Cleanest Driver and Driver of the Day (sum of number of times won for both)
+
 def Tab5(new_df, average_changed, drivers_total_points, average_qualifying, average_place, fig3, rookies):
 
     # Combine all data into a single DataFrame

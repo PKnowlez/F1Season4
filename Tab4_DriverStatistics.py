@@ -6,6 +6,8 @@ import math
 import numpy as np
 from PIL import Image
 
+# TODO add Cleanest Driver Award widget for each driver
+
 # Expands for each driver: Race results bar graph, highest finish, number of wins, 
 #   number of podiums, total points, fastest laps total, average qualifying,
 #   average place, qualifying vs finsih graph, qualyfing vs finish average
