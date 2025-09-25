@@ -7,7 +7,7 @@ mumscar = Image.open("./Images/MumsCar.jpg")
 preseason_memes = Image.open("./Images/PreseasonMemes.png")
 
 def article():
-    date = "Wednesday 09/24/2025"
+    date = "Thursday 09/25/2025"
     author = "The Intern"
 
     st.subheader('''Preseason Race Recap: We Are So Back''')
@@ -15,7 +15,7 @@ def article():
     st.markdown('''
                 What a flipping mess. Terrible settings (thanks Patrick), VSC and SC, carbon fiber everywhere, and some drivers failed to even start their cars...
 
-                Everyone was a rookie during this one. Surprisingly two of the rookies were the only ones who drove like veterans, with Jairo and Jayden putting Mercedes on the podium and well up the midfield respectively. The same cannot be said for some of our returning drivers.
+                Everyone was a rookie during this one. Surprisingly two of the rookies were the only ones who drove like veterans, with Jairo and Jayden putting Mercedes on the podium and well up the midfield respectively. The same cannot be said for some of our returning drivers...
 
                 Some of the driving seen today was disgraceful, no cap. So what if it was raining, these guys shouldn't be that bad. Some of them even forgot where their clutches were in the pits, sheesh.
 
