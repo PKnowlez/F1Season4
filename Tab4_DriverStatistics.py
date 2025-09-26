@@ -11,7 +11,7 @@ from PIL import Image
 # Expands for each driver: Race results bar graph, highest finish, number of wins, 
 #   number of podiums, total points, fastest laps total, average qualifying,
 #   average place, qualifying vs finsih graph, qualyfing vs finish average
-def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only):
+def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only,new_df_CD):
     # Variables for loop
     total_points = []
     average_changed = []
@@ -240,9 +240,22 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
                 elif value == 'y':
                     count_MOT += 1
             
-            # Sets the value to be displayed for Driver Fastest Lap
+            # Sets the value to be displayed for Most Overtakes
             button_key11 = button_key10 + "_" + str(i)
             MOT = 'Most Overtakes Award: ' + str(count_MOT)
+
+            # Calculates the number of Driver of the Day awards a driver has earned
+            driver_CD = new_df_CD.iloc[i, 1:].tolist()
+            count_CD = 0
+            for value in driver_CD:
+                if value == 'Y':
+                    count_CD += 1
+                elif value == 'y':
+                    count_CD += 1
+            
+            # Sets the value to be displayed for Most Overtakes
+            button_key12 = button_key11 + "_" + str(i)
+            CD = 'Cleanest Driver Award: ' + str(count_CD)
 
             # Creates the layout for each expand
             col1, col2, col3, col4 = st.columns(4)
@@ -269,6 +282,8 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
             with col10:
                 st.button(MOT,key=button_key11)
             with col11:
+                st.button(CD,key=button_key12)
+            with col12:
                 st.button(best_finish,key=button_key)
             col13, col14, col15 = st.columns(3)
             with col13:

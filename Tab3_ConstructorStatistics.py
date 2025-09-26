@@ -20,23 +20,83 @@ def Tab3(team_df,team_races_points_only,index_x,drivers_points_df,colors_driver_
     with col3:
         st.markdown('''**Stacked Constructor Points**''')
         fig_name000 = "Stacked Constructor Points"
-        
-        # Calculate total points per team
+
+        # Ensure 'Points' column is numeric
+        drivers_points_df['Points'] = pd.to_numeric(drivers_points_df['Points'], errors='coerce').fillna(0)
+
+        # Get the list of teams, sorted by total points
         team_total_points = drivers_points_df.groupby('Team')['Points'].sum().sort_values(ascending=True)
+        sorted_teams = team_total_points.index.tolist()
 
-        # Create the plot
-        globals()[fig_name000] = px.bar(drivers_points_df, 
-                                        x='Points', 
-                                        y='Team', 
-                                        color='Driver', 
-                                        orientation='h',
-                                        barmode='stack',
-                                        color_discrete_map=dict(zip(colors_driver_df['Driver'], colors_driver_df['Color'])))
+        # 1. Initialize an empty Figure
+        globals()[fig_name000] = go.Figure()
 
-        # Order the bars based on total team points
-        globals()[fig_name000].update_yaxes(categoryorder='array', categoryarray=team_total_points.index)
+        # 2. Define bar appearance and positions
+        bar_height = 0.4  # This is the new 'width' for our horizontal bars
+        offset = bar_height / 2.0  # We will shift each bar by half its height
 
-        st.plotly_chart(globals()[fig_name000])
+        # 3. Create a set to track which drivers are already in the legend
+        drivers_in_legend = set()
+
+        # 4. Loop through each team to manually place bars
+        for i, team in enumerate(sorted_teams):
+            # Get the two drivers for the current team
+            team_drivers_df = drivers_points_df[drivers_points_df['Team'] == team].reset_index(drop=True)
+
+            # There might be one or two drivers
+            if not team_drivers_df.empty:
+                # --- Bar for the first driver ---
+                driver_1_name = team_drivers_df.loc[0, 'Driver']
+                driver_1_points = team_drivers_df.loc[0, 'Points']
+                driver_1_color = dict(zip(colors_driver_df['Driver'], colors_driver_df['Color'])).get(driver_1_name)
+                
+                # Add to legend only if it's the first time we see this driver
+                show_legend_1 = driver_1_name not in drivers_in_legend
+                drivers_in_legend.add(driver_1_name)
+
+                globals()[fig_name000].add_trace(go.Bar(
+                    y=[i - offset], # Position below the centerline for the team
+                    x=[driver_1_points],
+                    name=driver_1_name,
+                    orientation='h',
+                    width=bar_height,
+                    marker_color=driver_1_color,
+                    legendgroup=driver_1_name,
+                    showlegend=show_legend_1
+                ))
+
+                # --- Bar for the second driver (if they exist) ---
+                if len(team_drivers_df) > 1:
+                    driver_2_name = team_drivers_df.loc[1, 'Driver']
+                    driver_2_points = team_drivers_df.loc[1, 'Points']
+                    driver_2_color = dict(zip(colors_driver_df['Driver'], colors_driver_df['Color'])).get(driver_2_name)
+
+                    # Add to legend only if it's the first time we see this driver
+                    show_legend_2 = driver_2_name not in drivers_in_legend
+                    drivers_in_legend.add(driver_2_name)
+                    
+                    globals()[fig_name000].add_trace(go.Bar(
+                        y=[i + offset], # Position above the centerline for the team
+                        x=[driver_2_points],
+                        name=driver_2_name,
+                        orientation='h',
+                        width=bar_height,
+                        marker_color=driver_2_color,
+                        legendgroup=driver_2_name,
+                        showlegend=show_legend_2
+                    ))
+
+        # 5. Final Layout Configuration
+        globals()[fig_name000].update_layout(
+            barmode='stack', # This mode works best with pre-positioned bars
+            yaxis=dict(
+                tickvals=list(range(len(sorted_teams))), # Set ticks at integer positions 0, 1, 2...
+                ticktext=sorted_teams  # Label those ticks with team names
+            ),
+            legend_tracegroupgap=0 # Adds a little space between driver groups in the legend
+        )
+
+        st.plotly_chart(globals()[fig_name000],use_container_width=True)
     
     with col4:
         st.markdown('''**Individual Constructor Statistics**''')
@@ -58,8 +118,11 @@ def Tab3(team_df,team_races_points_only,index_x,drivers_points_df,colors_driver_
 
                 # Use globals() to dynamically create the variable
                 globals()[fig_name] = px.bar(x=team_races_points_only, y=team_points, title=fig_name,
-                                            color=team_races_points_only,
-                                            color_discrete_sequence=colors)
+                                             color=team_races_points_only,
+                                             color_discrete_sequence=colors)
+                
+                globals()[fig_name].update_traces(width=0.8) 
+                
                 globals()[fig_name].update_xaxes(categoryorder='array', categoryarray=team_races_points_only)
 
                 # Update x-axis title

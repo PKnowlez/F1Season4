@@ -160,6 +160,7 @@ def Calculations():
     MOT_columns = [col for col in df.columns if col.endswith(('MOT'))]
     qualifying_columns = [col for col in df.columns if col.endswith(('Qualifying'))]
     place_columns = [col for col in df.columns if col.endswith(('Place'))]
+    CD_columns = [col for col in df.columns if col.endswith(('CD'))]
 
     # Creates the order of the races to be graphed along the x-axis
     races_points_only = races.copy()
@@ -189,6 +190,10 @@ def Calculations():
     new_df_Place = df.set_index('Driver')[place_columns]
     new_df_Place = new_df_Place.reset_index()
 
+    # Creates a new dataframe with only the drivers and cleanest driver columns
+    new_df_CD = df.set_index('Driver')[CD_columns]
+    new_df_CD = new_df_CD.reset_index()
+
     drivers_total_points = []
     for i in range(len(new_df['Driver'])):
         driver_points = new_df.iloc[i, 1:].tolist()
@@ -196,4 +201,4 @@ def Calculations():
         drivers_total_points.append(total_pointsN)
 
     return team_race_totals,driver_race_totals,df,races,team_colors,fig1,fig2,fig3,race_place,race_points,index_x, \
-        new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only,drivers_total_points,driver_colors,rookies
+        new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_Place,races_points_only,drivers_total_points,driver_colors,rookies,new_df_CD
