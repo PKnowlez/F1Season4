@@ -21,7 +21,7 @@ def article():
     st.markdown('''             
                 Nothing could have prepared the drivers for the events of last night. From Safety Cars to glitches galore, the drivers were faced with perils from before they even got to the paddock all the way through the fireworks.
                 
-                Interestingly enough, the stewards were a bit unenthused throughout the chaos. But before we get into that and let our illustrious intern unravels the ongoings of last night, there is a bit of late breaking news from the FIA about the race results.
+                Interestingly enough, the stewards were a bit unenthused throughout the chaos. But before we get into that and let our illustrious intern unravel the ongoings of last night, there is a bit of late breaking news from the FIA about the race results.
                 ''')
     st.markdown('''
                 <div style="width: 25%; border-bottom: 1px solid #cccccc;"></div>
