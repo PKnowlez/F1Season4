@@ -10,7 +10,7 @@ def Tab0():
 
     #region --
 
-    season4_Bahrain_Recap.article()
+    st.markdown('Miami Race Week Article Coming Soon')
 
     #endregion
     
@@ -26,6 +26,8 @@ def Tab0():
             st.rerun()
 
     if st.session_state.show_all_content:
+
+        season4_Bahrain_Recap.article()
 
         season4_Bahrain_Week.article()
 
