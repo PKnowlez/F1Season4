@@ -18,6 +18,26 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
     average_qualifying = []
     average_place = []
 
+    with st.expander(':red[**LICENSE PENALTY POINTS**]'):
+        license_points = {
+            "Driver":   ['Eddie','Jayden'],
+            "Bahrain":  ['1','-'],
+            "Miami":    ['-','1']
+        }
+        driver_totals = [0] * len(license_points["Driver"])
+        race_columns = [col for col in license_points.keys() if col != "Driver"]
+        for race in race_columns:
+            points_list = license_points[race]
+            for i, points in enumerate(points_list):
+                try:
+                    numeric_points = int(points)
+                except ValueError:
+                    numeric_points = 0
+                driver_totals[i] += numeric_points
+        license_points["Total"] = [str(total) for total in driver_totals]
+        license_df = pd.DataFrame(license_points)
+        st.dataframe(license_df,hide_index=True)
+
     # Loops through each driver to create an expand with their information only
     for i in range(len(new_df['Driver'])):
         with st.expander(new_df['Driver'][i]):
@@ -41,7 +61,27 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
             globals()[fig_name].update_yaxes(title_text="Points")
 
             # Update layout
-            globals()[fig_name].update_layout(xaxis_range=[-0.5,index_x], showlegend=False)
+            globals()[fig_name].update_layout(
+                xaxis_range=[-0.8, index_x+0.3], 
+                showlegend=False,
+            )
+
+            for trace in globals()[fig_name].data:
+                trace.width = 0.85
+                if hasattr(trace, 'x') and trace.x is not None:
+                    category_map = {category: i for i, category in enumerate(races_points_only)}
+                    trace.x = [category_map[cat] + 0.3 for cat in trace.x]
+
+            tickvals = list(range(len(races_points_only)))
+            ticktext = races_points_only
+
+            globals()[fig_name].update_xaxes(
+                tickmode='array', 
+                tickvals=tickvals, 
+                ticktext=ticktext,
+                categoryorder='array', 
+                categoryarray=races_points_only
+            )
 
             # Calculates the highest placement a driver has achieved
             highest_score = max(driver_points)
@@ -169,8 +209,8 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
 
             # Use globals() to dynamically create the variable with the color list
             globals()[fig_name3] = px.bar(x=races_points_only[:index_a], y=qualifying_place, 
-                                        title=fig_name3, color=colorsRG,
-                                        color_discrete_map="identity")
+                                         title=fig_name3, color=colorsRG,
+                                         color_discrete_map="identity")
 
             globals()[fig_name3].update_xaxes(categoryorder='array', categoryarray=races_points_only)
 

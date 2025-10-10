@@ -94,12 +94,12 @@ def article():
 
                 Finally, our Ferrari friends had a bit of a howler with a DNF from Leo and a surprisingly mediocre drive from Erick. I guess there's always next year or whatever the Tifosi say. 
                 ''')
-    st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Your GIF">', unsafe_allow_html=True)
-    st.markdown(
-        f'''
-        <p style="color:lightgray;"> {date} - {author}</p>
-        ''',
-        unsafe_allow_html=True,)
+    # st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Your GIF">', unsafe_allow_html=True)
+    # st.markdown(
+    #     f'''
+    #     <p style="color:lightgray;"> {date} - {author}</p>
+    #     ''',
+    #     unsafe_allow_html=True,)
     st.divider()
 
 # ----- How to add a GIF: ----- #
