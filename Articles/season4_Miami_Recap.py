@@ -12,7 +12,7 @@ def article():
     date = "Friday 10/10/2025"
     author = "The Intern"
 
-    st.subheader('''Race Recap - Miami: Vice City Magic''')
+    st.subheader('''Race Recap - Miami: Vice City Mania''')
     st.image(cover)
     st.markdown('''
                 Tuh-tuh-tuh-today Junior, or, well, maybe next race. Last week one of the McLaren's served a race ban, and this week Alpine's Eddie simply decided not to show up. Something about "I'm going to a party and I don't care if my teammate needs me."
