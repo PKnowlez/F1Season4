@@ -14,7 +14,7 @@ def article():
     st.markdown('''
                 **TWITCH TV TO RETAIN RIGHTS TO CURRENT LEAGUE STREAMS**
 
-                * **Source:** Trust me bro - The Intern*
+                *Source: Trust me bro - The Intern*
                 ''')
     
     st.subheader('''Race Week: Spain''')
