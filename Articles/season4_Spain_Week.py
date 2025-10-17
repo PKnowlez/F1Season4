@@ -11,7 +11,11 @@ def article():
     author = "Patrick"
 
     st.subheader('''**BREAKING NEWS**''')
-    st.markdown('''TWITCH TV TO RETAIN RIGHTS TO CURRENT LEAGUE STREAMS''')
+    st.markdown('''
+                **TWITCH TV TO RETAIN RIGHTS TO CURRENT LEAGUE STREAMS**
+
+                * **Source:** Trust me bro - The Intern*
+                ''')
     
     st.subheader('''Race Week: Spain''')
     st.image(banner)
