@@ -10,12 +10,18 @@ def article():
     date = "Thursday 10/16/2025"
     author = "Patrick"
 
+    st.markdown('''
+            <div style="width: 25%; border-bottom: 1px solid #cccccc;"></div>
+            ''', unsafe_allow_html=True)
     st.subheader('''**BREAKING NEWS**''')
     st.markdown('''
                 **TWITCH TV TO RETAIN RIGHTS TO CURRENT LEAGUE STREAMS**
 
                 *Source: Trust me bro - The Intern*
                 ''')
+    st.markdown('''
+                <div style="width: 25%; border-bottom: 1px solid #cccccc;"></div>
+                ''', unsafe_allow_html=True)
     
     st.subheader('''Race Week: Spain''')
     st.image(banner)
