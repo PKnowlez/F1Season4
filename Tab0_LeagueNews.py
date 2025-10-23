@@ -3,7 +3,7 @@ from streamlit_carousel import carousel
 from Articles import season4_track_overview, season4_schedule_reveal, season4_trophy_reveal, season4_track_tier_list, \
                 season4_track_rankings, season4_ROTY_award, season4_Preseason, season4_Bahrain_Week, \
                 season4_Bahrain_Recap, season4_Miami_Week, season4_Miami_FIA, season4_Miami_Recap, \
-                season4_Spain_Week
+                season4_Spain_Week, season4_Spain_Recap
 
 def Tab0():
     if 'show_all_content' not in st.session_state:
@@ -11,7 +11,7 @@ def Tab0():
 
     #region --
 
-    season4_Spain_Week.article()
+    season4_Spain_Recap.article()
 
     #endregion
     
@@ -27,6 +27,8 @@ def Tab0():
             st.rerun()
 
     if st.session_state.show_all_content:
+
+        season4_Spain_Week.article()
 
         season4_Miami_Recap.article()
     
