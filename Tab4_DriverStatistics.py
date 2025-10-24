@@ -18,11 +18,12 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
     average_qualifying = []
     average_place = []
 
-    with st.expander(':red[**LICENSE PENALTY POINTS**]'):
+    with st.expander(':red[**SUPER LICENSE PENALTY POINTS**]'):
         license_points = {
-            "Driver":   ['Eddie','Jayden'],
-            "Bahrain":  ['1','-'],
-            "Miami":    ['-','1']
+            "Driver":   ['Eddie','Jayden','Nick'],
+            "Bahrain":  ['1','-','-'],
+            "Miami":    ['-','1','-'],
+            "Spain":    ['-','-','1']
         }
         driver_totals = [0] * len(license_points["Driver"])
         race_columns = [col for col in license_points.keys() if col != "Driver"]
