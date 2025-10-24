@@ -5,10 +5,14 @@ from PIL import Image
 
 qualifying = Image.open("./Images/Spain Qualifying.png")
 race = Image.open("./Images/Spain Race.png")
+alpine = Image.open("./Images/Spain Alpine Statement.png")
 
 def article():
     date = "Friday 10/23/2025"
     author = "The Intern"
+
+    st.subheader('''Alpine Team Statement: Spain Incident''')
+    st.image(alpine)
 
     st.subheader('''Race Recap: Spain - Un Tango Turbulento''')
     st.markdown('''
@@ -24,7 +28,7 @@ def article():
                 ''')
     st.image(qualifying)
     st.markdown('''
-                Now, once qualifying was settled Del decided he would grace the league with his presence and joined the race. And boy did he have a race! Something about some super powers from something he ate or something. It wasn't clear what he ate in Patrick's notes, but whatever it was, he should do that again. From 15th to 7th in a normal race format is in--wait for it--sane.
+                Now, once qualifying was settled Del decided he would grace the league with his presence and joined the race. And boy did he have a race! Something about some super powers from something he ate or something. It wasn't clear what he ate in Patrick's notes, but whatever it was, he should do that again. From 15th to 8th in a normal race format is in--wait for it--sane.
 
                 But that was not the only insanity that the race brought ot us. Oh no, we had much, much more. I'm bringing back a classic format here for this recap. If you're a fan of my origin story, you'll recognize this as an homage to the first ever article that the league let me write. Enjoy.
                 ''')
