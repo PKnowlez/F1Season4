@@ -18,6 +18,7 @@ def article():
                 ''')
     st.markdown('''
                 <div style="background-color: #97978F; padding: 10px; border-radius: 5px;">
+                
                 **OFFICIAL RELEASE** <br><br>
 
                 McLaren's Nick submitted a protest to reverse his penalty point earned in Spain. All drivers have now voted, with 9 voting to remove the point and 5 voting to keep the point. This result means Nick will retain the penalty point on his Super License for the remainder of the season.
