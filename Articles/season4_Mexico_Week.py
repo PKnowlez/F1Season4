@@ -14,10 +14,11 @@ def article():
     st.subheader('''Race Week: Mexico''')
     st.image(cover)
     st.markdown('''
+                <div style="background-color: #97978F; padding: 10px; border-radius: 5px;">
                 But first, the league's first ever protest vote has concluded. Regulation 9 states that a driver can protest an official ruling within 24 hours of the ruling being released. To overturn the ruling, the league needs a super majority, or in other words 2/3rds of the vote. This amounts to 10 votes with the current league size of 14 drivers.
 
                 McLaren's Nick submitted a protest to reverse his penalty point earned in Spain. All drivers have now voted, with 9 voting to remove the point and 5 voting to keep the point. This result means Nick will retain the penalty point on his Super License for the remainder of the season.
-                ''')
+                ''', unsafe_allow_html=True)
     st.markdown('''
                 With that breaking news settled, Viva la México, because it is race week down in Mexico City. The converted stadium and street circuit rests at the highest altitude of any track the league will face all season. At 7,350 feet, even our drivers from Colorado will be feeling the thin air.
                 
