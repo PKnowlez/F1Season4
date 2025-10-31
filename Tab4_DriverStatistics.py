@@ -103,7 +103,7 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
                 place = '7th'
             elif highest_score >= 4:
                 place = '8th'
-            elif highest_score >= 2:
+            elif highest_score >= 3:
                 place = '9th'
             else:
                 place = '10th or lower'
