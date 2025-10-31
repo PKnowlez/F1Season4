@@ -45,7 +45,7 @@ def article():
 
                 His suspicion was almost true. When the dry weather rolled in and the rain rolled away, everyone was able to pit and those who were there at just the right time took a minor advantage over their competitors. Aston Martin's Del was one who, unfortunately, was unlucky in this moment fitting the wrong tires during his first stop and falling off as the soft tires wore in quickly.
 
-                Both McLaren's Nick and Aston Martin's Boz also had disappointing pit stops as the weather shifted. Both drivers ended up with a second set of intermediate weather tires instead of slicks.
+                Both McLaren's Travis and Aston Martin's Boz also had disappointing pit stops as the weather shifted. Both drivers ended up with a second set of intermediate weather tires instead of slicks.
 
                 The race continued rather smoothly without a single VSC or SC. Again, only a few bumps and shoves occurred throughout the race. But as time wound down, penalties started to stack up. Joshua, on nearly completely worn tires, ended up spinning and gaining nine seconds worth of penalties that helped Patrick leap frog him.
 
