@@ -3,18 +3,30 @@ import base64
 from streamlit_carousel import carousel
 from PIL import Image
 
-image = Image.open("./Images/image.png")
-cover = Image.open("./Images/Baku/...")
-patrick1 = Image.open("./Images/Baku/...")
-patrick2 = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
-cover = Image.open("./Images/Baku/...")
+# cover = Image.open("./Images/Baku/...")
+patrick1 = Image.open("./Images/Baku/patrick1.png")
+patrick2 = Image.open("./Images/Baku/patrick2.png")
+boz = Image.open("./Images/Baku/boz.png")
+brently = Image.open("./Images/Baku/brently.png")
+dEl = Image.open("./Images/Baku/del.png")
+eddie = Image.open("./Images/Baku/eddie.png")
+erick1 = Image.open("./Images/Baku/erick1.png")
+erick2 = Image.open("./Images/Baku/erick2.png")
+jaden1 = Image.open("./Images/Baku/mercedes.png")
+jaden2 = Image.open("./Images/Baku/jaden2.png")
+jairo1 = Image.open("./Images/Baku/mercedes.png")
+jairo2 = Image.open("./Images/Baku/jairo2.png")
+josh1 = Image.open("./Images/Baku/josh1.png")
+josh2 = Image.open("./Images/Baku/josh2.png")
+joshua1 = Image.open("./Images/Baku/joshua1.png")
+joshua2 = Image.open("./Images/Baku/joshua2.png")
+leo1 = Image.open("./Images/Baku/leo1.png")
+leo2 = Image.open("./Images/Baku/leo2.png")
+matthew1 = Image.open("./Images/Baku/matthew1.png")
+matthew2 = Image.open("./Images/Baku/matthew2.png")
+nick1 = Image.open("./Images/Baku/nick1.png")
+nick2 = Image.open("./Images/Baku/nick2.png")
+travis = Image.open("./Images/Baku/travis.png")
 
 def article():
     date = "Thursday 11/06/2025"
@@ -26,11 +38,11 @@ def article():
                 **Press Release** <br>
                 **For Immediate Release** <br>
                 Date: November 06, 2025 <br>
-                Time: 5:30PM Mountain <br>
-                From: The FIA and The Stewards <br>
+                Time: 6:00PM Mountain <br>
+                From: FIA Stewards <br>
                 To: All Competitors, All Teams <br>
 
-                **SUBJECT:** Decision – Baku Incidents: Eddie & Leo, Travis & Eddie, Erick & Boz, Josh <br>
+                **SUBJECT:** Decision – Baku Incidents: Eddie & Leo, Travis & Eddie, Erick & Boz, and Josh <br>
 
                 **DESCRIPTION OF INCIDENTS** <br>
                 Eddie (Alpine) was stalled on the racing line in Sector 3 during a VSC around a blind corner, where Leo (Ferrari) ran into the back of Eddie.
@@ -39,16 +51,16 @@ def article():
 
                 Erick (Ferrari) was given an in race 10 second penalty while two cars covered the entire width of the track due to a collision with Boz (Aston Martin).
 
-                Josh (VCARB) was given an in race 10 second penalty while navigating between two sideways cars on the track.
+                Josh (VCARB) was given an in race 10 second penalty while navigating between two sideways cars on track.
 
                 **FINDINGS & DECISION: Eddie & Leo** <br>
-                Upon reviewing footage and the nature of the blind turn, the FIA and Stewards have determined that Eddie could have made evasive maneuvers to get off of the racing line in a blind corner. Due to this, Eddie caused the incident with a nearly defenseless Leo. Per league regulations, Eddie will have a 5 place penalty added to his finishing place and a penalty point added to his super license. Due to other circumstances, Eddie did not finish the race, and therefore his final standing will still be classified as DNF regardless of the penalty.
+                Upon reviewing footage and the nature of the blind turn, the FIA Stewards have determined that Eddie could have made evasive maneuvers to get off of the racing line in a blind corner. Due to this, Eddie caused the incident with a nearly defenseless Leo. Per league regulations, Eddie will have a 5 place penalty added to his finishing place and a penalty point added to his super license. Due to other circumstances, Eddie did not finish the race, and therefore his final standing will still be classified as DNF regardless of the penalty.
 
                 **FINDINGS & DECISION: Travis & Eddie** <br>
-                After reviewing all mitigating circumstances and potential outcomes, the FIA and Stewards have come to a final verdict that Travis is at fault for teh collision with Eddie. Travis had opportunities to safely come out of AI control or retire the car that could have eliminated this outcome. Therefore, because Eddie's race was ended, Travis will be penalized for 5 places to his finishing position as well as have a penalty point added to his super license. Due to this incident, Travis did not finish the race, and therefore his final standing will still be classified as DNF regardless of the penalty.
+                After reviewing all mitigating circumstances and potential outcomes, the FIA Stewards have come to a final verdict that Travis is at fault for the collision with Eddie. Travis had opportunities to safely come out of AI control or retire the car that could have eliminated this outcome. Therefore, because Eddie's race was ended, Travis will be penalized for 5 places to his finishing position as well as have a penalty point added to his super license. Due to this incident, Travis did not finish the race, and therefore his final standing will still be classified as DNF regardless of the penalty.
                 
                 **FINDINGS & DECISION: Erick & Boz** <br>
-                After reviewing the data, it is clear that the 10 second penalty provided to Erick during the race was unfairly awarded. Therefore, he will have 10 seconds removed from his finishing position, pushing him up the standings 1 position into 6th.
+                When reviewing the data, it is clear that the 10 second penalty provided to Erick during the race was unfairly awarded. Therefore, he will have 10 seconds removed from his finishing time, pushing him up the standings 1 position into 6th.
 
                 **FINDINGS & DECISION: Josh** <br>
                 While reviewing onboard footage, it is clear that Josh did not contact any of the vehicles in the accident. Therefore, Josh will be granted his 10 seconds back on his finishing time which results in his final place being 5th.
@@ -67,22 +79,22 @@ def article():
                 ''', unsafe_allow_html=True)  
 
     st.subheader('''Race Recap: Skibidi Toilet Baku My Dudes''')
-    st.image(cover)
+    # st.image(cover)
     st.markdown('''
-                Alright, with all that vibe killing stuff out of the way, it's time review the turbo mess that was Baku. Drivers crashing from Lap 1 all the way to the end. Even the top contenders sucked, damaging wings early and late.
+                Alright, with all that vibe killing stuff out of the way, it's time to review the turbo mess that was Baku. Drivers crashing from Lap 1 all the way to the end. Even the top contenders sucked, damaging wings early and late.
 
-                I have decided that it is time to revamp the format as well. No one will be safe in this new format. Each driver is going to be ripped into mercilessly with memes and mini-recaps of their race.
+                I have decided that due to this hot garbage dumpster fire race, it is time to revamp the format for this special occasion. No one will be safe in this new format. Each driver is going to be ripped into mercilessly with memes and mini-recaps of their race.
 
                 To make this happen though, I had to make a deal with the boss. Before the memes begin, I will do a micro-recap of qualifying and the race. Enjoy the boring stuff, or skip it and go check out the memes (do that, no cap this next part blows).
 
-                **QUALIFYING**
+                **QUALIFYING**  
                 Pretty standard qualifying, honestly. No real shakeups. Well...except the catastrophe at the end of Q1. VCARB driver Josh started singing 'Jesus Take the Wheel,' and demolished his entire car after already making it into Q2.
 
                 Bro must have tipped his mechanics big time becase they got the car back together for him ASAP and he started from last on the grid for the race.
 
                 Mercedes' Jairo took home another pole position with Alpine's Joshua right behind. Honestly, I thought Joshua was fast, but he's getting obliterated this season in qualifying. Shmuck. Last year's champ and race winner also dropped a stinker and qualified in 5th.
 
-                **RACE**
+                **RACE**  
                 The race was dumb. Safety Cars left right and center. Even a Red Flag occurred. Which was boring just staring at nothing until the drivers got rolling again. But whatever.
 
                 After the Red Flag drivers decided to be as dull as possible. Barely any overtakes, no real meaningful pitstop strategies, and truly nothing out of the ordinary.
@@ -130,7 +142,7 @@ def article():
                     It might not have been his best finish, but at least bro finished. Also, first race moving forward in the standings from qualifying, maybe this guy is the real Red Bull #1.
                     ''')
     with st.expander('7 - Del'):
-        st.image(DEL)
+        st.image(dEl)
         st.markdown('''
                     BRUTAL, homie does everything he can to finish this year and still ends up two places behind due to some buggy penalties. Baku will likely haunt this guy forever. Some might even say he's cursed here.
                     ''')
@@ -164,11 +176,11 @@ def article():
         st.markdown('''
                     To quote the man himself "Lock IN!"
                     ''')
-    with st.expander('DNF - Patrick'):
+    with st.expander('1 - Jairo'):
         st.image(jairo1)
         st.image(jairo2)
         st.markdown('''
-                    A dubs a dub I guess. Maybe next time he will finish with all his end plates and on the top step. But for now he is skyrocketing up the standings.
+                    A dubs a dub I guess. Maybe next time he will finish with his end plates and on the top step. But for now he is skyrocketing up the standings.
                     ''')
     st.markdown(
         f'''

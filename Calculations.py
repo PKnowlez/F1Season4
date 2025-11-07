@@ -11,7 +11,7 @@ def Calculations():
     # Read in excel sheet
     df = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='Season4')
 
-    rookies = {'Jairo', 'Jayden', 'Josh', 'Leo', 'Matthew'}
+    rookies = {'Jairo', 'Jaden', 'Josh', 'Leo', 'Matthew'}
 
     race_points = [col for col in df.columns if col.endswith('Points')]
     race_place = [col for col in df.columns if col.endswith('Place')]
@@ -65,7 +65,7 @@ def Calculations():
         'Boz': '#01C79E',
         'Erick': 'red',
         'Leo': '#ff6060',
-        'Jayden': 'black',
+        'Jaden': 'black',
         'Jairo': 'darkgray'
     } 
 
