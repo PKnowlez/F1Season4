@@ -3,7 +3,8 @@ import base64
 from streamlit_carousel import carousel
 from PIL import Image
 
-# cover = Image.open("./Images/Baku/...")
+cover = Image.open("./Images/baku2.png")
+mid = Image.open("./Images/baku1.png")
 patrick1 = Image.open("./Images/Baku/patrick1.png")
 patrick2 = Image.open("./Images/Baku/patrick2.png")
 boz = Image.open("./Images/Baku/boz.png")
@@ -79,7 +80,7 @@ def article():
                 ''', unsafe_allow_html=True)  
 
     st.subheader('''Race Recap: Skibidi Toilet Baku My Dudes''')
-    # st.image(cover)
+    st.image(cover)
     st.markdown('''
                 Alright, with all that vibe killing stuff out of the way, it's time to review the turbo mess that was Baku. Drivers crashing from Lap 1 all the way to the end. Even the top contenders sucked, damaging wings early and late.
 
@@ -103,6 +104,7 @@ def article():
 
                 Ok, onto the good stuff. As always, enjoy.
                 ''')
+    st.image(mid)
     with st.expander('DNF - Patrick'):
         st.image(patrick1)
         st.image(patrick2)
