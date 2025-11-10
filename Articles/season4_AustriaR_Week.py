@@ -26,7 +26,7 @@ def article():
                 **RUMOR MILL**  
                 The strongest rumor running around is that one of the drivers in Papaya will be moving on from their position as a driver to a new rank within the FIA at the end of the season. There are no names associated with this rumor just yet, and it is unclear what role within the FIA is opening up or if a new one is being created. More on this as it develops.
 
-                In addition to the rumors surround McLaren, there are rumors around the upcoming 11th team on the grid. Word on the street is that four drivers are looking to combine forces on what they are calling Team USA. This was discovered from leaked carrier bald eagle messages that the group of four has been sending to covertly communicate their plans. Handwriting analyses are underway and we will likely find answers in the near future on who these potential drivers are.
+                In addition to the rumors surrounding McLaren, there are rumors around the upcoming 11th team on the grid. Word on the street is that four drivers are looking to combine forces on what they are calling Team USA. This was discovered from leaked carrier bald eagle messages that the group of four has been sending to covertly communicate their plans. Handwriting analyses are underway and we will likely find answers in the near future on who these potential drivers are.
 
                 With Kick Sauber finding the end of their run as a team this season, there have also been rumors of who might race with rings next year. Some solid rumors are coming in that a good lineup is coming to Audi next season. Whoever these drivers are they "gotta go fast, like Sonic, like Sonic" with all those rings.
                 ''')
