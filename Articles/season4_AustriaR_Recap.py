@@ -30,7 +30,7 @@ def article():
                 ''')
     st.image(image)
     st.markdown('''
-                So yeah, it was wild. But this means that Mercedes has a commanding lead in the Cosntructor's Championship and, unsurprisingly, the man with three straight wins is now leading the Driver's Championship by 9 points.
+                So yeah, it was wild. But this means that Mercedes has a commanding lead in the Constructor's Championship and, unsurprisingly, the man with three straight wins is now leading the Driver's Championship by 9 points.
 
                 Not that I am superstitious, but no driver has been able to hold the Driver's Championship lead for more than two straight weeks so far this season. So the writing is on the wall, someone else may jump into first in Spa next week with a Sprint and Race on the schedule.
 
