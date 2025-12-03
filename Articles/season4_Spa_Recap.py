@@ -52,7 +52,7 @@ def article():
 
                 Jaden and Jairo started last with Patrick and Joshua in front of them as the top four from the sprint. But they did not stay in the rear too long.
 
-                After some smoothing passing and some...well...ridiculously ballsy passing concluded, the league found themselves nearly fully right side up just before a safety car struck. A total disaster-class for VCARB's Josh as he forgot to pit under the safety car and likely lost the race due to it.
+                After some smooth passing and some...well...ridiculously ballsy passing concluded, the league found themselves nearly fully right side up just before a safety car struck. A total disaster-class for VCARB's Josh as he forgot to pit under the safety car and likely lost the race due to it.
 
                 Others were much luckier and cruised in for fresh tires. As the rest of the race proceeded, another safety car struck right near the end. This bunched up the psychos and the more subdued drivers and allowed for one psycho in particular to pit for fresh soft tires.
 
@@ -73,7 +73,7 @@ def article():
         st.image(pk5)
         st.image(pk6)
         st.image(pk7)
-    with st.expander('''**THE ROAST OF JOSHUS & JOSH**'''):
+    with st.expander('''**THE ROAST OF JOSHUA & JOSH**'''):
         st.markdown('''
                     That's right, these two both had a howler and deserve to be jointly roasted because who ever knows which is which anyways.
                     ''')
