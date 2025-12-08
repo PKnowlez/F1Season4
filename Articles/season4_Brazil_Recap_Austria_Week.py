@@ -22,14 +22,15 @@ def article():
 
     st.subheader('''Race Recap: Brazil & Race Week: Austria''')
     st.markdown('''
-                That's right, a two for one article. Even better yet, my boos Patrick and I are co-authoring this. That means I am simply sticking to the memes and he is going to do all the boring official nonsense.
+                That's right, a two for one article. Even better yet, my boss Patrick and I are co-authoring this. That means I am simply sticking to the memes and he is going to do all the boring official nonsense.
 
-                So to start this off, please skip his boring sprint and race recaps. You'll find a nice little roast of our great leader Erick and his absolute dumpster fire of a race just afterwards. Just go straight there tbh.
+                So to start this off, please skip his boring sprint and race recap. You'll find a nice little roast of our great leader Erick and his absolute dumpster fire of a race just afterwards. Just go straight there tbh.
 
                 **RACE RECAP**
-                As our illustrious intern pointed out, this is a co-authored double trouble article. The first section here will be a quick synopsis of the sprint qulifying and sprint, followed by a detailed analysis of the full race itself.
 
-                Qualifying was a single session shootout for all who were able to make it. This is an important note because both the ASton Martins of Boz and Del were unable to make it as well as McLaren's Travis. With those drivers out, the league got to it and Joshua found himself on top of the leaderboard once again.
+                As our illustrious intern pointed out, this is a co-authored double trouble article. The first section here will be a quick synopsis of the sprint qualifying and sprint, followed by a detailed analysis of the full race itself.
+
+                Qualifying was a single session shootout for all who were able to make it. This is an important note because both the Aston Martins of Boz and Del were unable to make it as well as McLaren's Travis. With those drivers out, the league got to it and Joshua found himself on top of the leaderboard once again.
 
                 Behind him were the two Mercedes of Jairo and Jaden followed closely by Nick. With the first two rows of the grid set, the Red Bull and VCARB teams sorted in from 5th to 8th with Patrick, Josh, Matthew, and Brently. The second Alpine, Eddie, found himself in 9th with the two Ferraris in 10th and 11th. Notably, rookie Leo out qualified his senior teammate Erick.
 
@@ -66,7 +67,7 @@ def article():
         st.image(joshua2)
     st.subheader('''Race Week: Austria''')
     st.markdown('''
-                With the intern's roasting of Erick and a few strays to Newman and Joshua over, it's time to do an abbreviated race week arctivel for Austria. The shortest circuit on the calendar rears its head again. This time, in the clockwise direction.
+                With the intern's roasting of Erick and a few strays to Newman and Joshua over, it's time to do an abbreviated race week article for Austria. The shortest circuit on the calendar rears its head again. This time, in the clockwise direction.
                 
                 Unlike the league's last outing here in reverse, this time there is ample data from previous seasons to analyze. In fact, this is a perenial staple on the league's set of tracks. For the fourth time, the league will rip laps around the Red Bull Ring. There has never been a repeat winner where the hills are alive with the sound of V6 engines.
 
@@ -80,9 +81,7 @@ def article():
 
                 Turn 3's hard braking zone will prove to be an opportune time to overtake and can even be timed to allow for the overtaking driver to takeoff with DRS down the next straight.
 
-                Sector 2 then progresses to wrap back downhill with twisting sweepers and narrow straights into the full tilt final two corners where track limits are sure to become a challenge.
-
-                With such a short circuit, we are bound to see cars lapped, drivers battling, and incidents here, there, and everywhere.
+                Sector 2 then progresses to wrap back downhill with twisting sweepers and narrow straights into the full tilt final two corners where track limits are sure to become a challenge. With such a short circuit, we are bound to see cars lapped, drivers battling, and incidents here, there, and everywhere.
                 ''')
     st.markdown(
         f'''
