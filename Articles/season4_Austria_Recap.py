@@ -3,7 +3,17 @@ import base64
 from streamlit_carousel import carousel
 from PIL import Image
 
-memes = Image.open("./Images/Austria_Memes.png")
+# memes = Image.open("./Images/Austria_Memes.png")
+austria1 = Image.open("./Images/Austria/austria1.jpg")
+austria2 = Image.open("./Images/Austria/austria2.jpg")
+austria3 = Image.open("./Images/Austria/austria3.jpg")
+austria4 = Image.open("./Images/Austria/austria4.jpg")
+austria5 = Image.open("./Images/Austria/austria5.jpg")
+austria6 = Image.open("./Images/Austria/austria6.jpg")
+austria7 = Image.open("./Images/Austria/austria7.jpg")
+austria8 = Image.open("./Images/Austria/austria8.jpg")
+austria9 = Image.open("./Images/Austria/austria9.jpg")
+austria10 = Image.open("./Images/Austria/austria10.jpg")
 
 def article():
     date = "Thursday 12/11/2025"
@@ -29,7 +39,17 @@ def article():
 
                 Fun fact, Patrick has literally never finished first when winning, bro is just a penalty merchant. Regardless, enjoy the memes. They slap. Oh and stay tuned for some rumors and an FIA announcement below.
                 ''')
-    st.image(memes)
+    # st.image(memes)
+    st.image(austria1)
+    st.image(austria2)
+    st.image(austria3)
+    st.image(austria4)
+    st.image(austria5)
+    st.image(austria6)
+    st.image(austria7)
+    st.image(austria8)
+    st.image(austria9)
+    st.image(austria10)
     st.markdown('''
                 **RUMOR MILL ROUNDUP**
 
