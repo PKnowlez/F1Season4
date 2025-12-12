@@ -6,7 +6,7 @@ from Articles import season4_track_overview, season4_schedule_reveal, season4_tr
                 season4_Spain_Week, season4_Spain_Recap, season4_Spain_FIA, season4_Mexico_Week, season4_Nick_1000, \
                 season4_Mexico_Recap, season4_Baku_Week, season4_Baku_Recap, season4_AustriaR_Week, \
                 season4_AustriaR_Recap, season4_Spa_Week, season4_Spa_FIA, season4_Spa_Recap, season4_Brazil_Week, \
-                season4_Brazil_FIA, season4_Brazil_Recap_Austria_Week
+                season4_Brazil_FIA, season4_Brazil_Recap_Austria_Week, season4_Austria_Recap
 
 def Tab0():
     if 'show_all_content' not in st.session_state:
@@ -14,9 +14,7 @@ def Tab0():
 
     #region --
 
-    season4_Brazil_FIA.article()
-    
-    season4_Brazil_Recap_Austria_Week.article()
+    season4_Austria_Recap.article()
 
     #endregion
     
@@ -32,6 +30,10 @@ def Tab0():
             st.rerun()
 
     if st.session_state.show_all_content:
+
+        season4_Brazil_FIA.article()
+    
+        season4_Brazil_Recap_Austria_Week.article()
 
         season4_Brazil_Week.article()
 
