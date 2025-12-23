@@ -30,6 +30,7 @@ def Tab4(colors,index_x,new_df,new_df_FL,new_df_DOTD,new_df_MOT,new_df_Q,new_df_
             "Spa":          ['-','-','-','-','1','1'],
             "Brazil":       ['-','-','-','-','-','-'],
             "Austria":      ['-','1','-','-','-','-'],
+            "Zandvoort":    ['-','-','-','-','-','-'],
         }
         driver_totals = [0] * len(license_points["Driver"])
         race_columns = [col for col in license_points.keys() if col != "Driver"]
