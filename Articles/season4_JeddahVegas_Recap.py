@@ -20,12 +20,14 @@ jv1 = Image.open("./Images/Jeddah Vegas/JeddahVegas1.png")
 jv2 = Image.open("./Images/Jeddah Vegas/JeddahVegas2.png")
 jv3 = Image.open("./Images/Jeddah Vegas/JeddahVegas3.png")
 jv4 = Image.open("./Images/Jeddah Vegas/JeddahVegas4.png")
+cover = Image.open("./Images/Jeddah Vegas/VegasCover.png")
 
 def article():
     date = "Thursday 01/08/2026"
     author = "The Intern"
 
     st.subheader('''Race Recap: Jeddah & Las Vegas - Viva Las Double Header''')
+    st.image(cover)
     st.markdown('''
                 **JEDDAH RECAP**
                 
