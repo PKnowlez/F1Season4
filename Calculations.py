@@ -11,6 +11,9 @@ def Calculations():
     # Read in excel sheet
     df = pd.read_excel('The_Alternative_F1.xlsx', sheet_name='Season4')
 
+    # Drop any rows where the 'Driver' column is empty
+    df = df.dropna(subset=['Driver'])
+
     rookies = {'Jairo', 'Jaden', 'Josh', 'Leo', 'Matthew'}
 
     race_points = [col for col in df.columns if col.endswith('Points')]
