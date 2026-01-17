@@ -25,6 +25,10 @@ def article():
 # data_url = base64.b64encode(contents).decode('utf-8')
 # st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Your GIF">', unsafe_allow_html=True)
 
+# ----- How to add a Video: ----- #
+# video = "./Images/VideoFile.mp4"
+# st.video(video, format="video/mp4", loop=False, autoplay=False, muted=False, width="stretch")
+
 # ----- How to add a Carousel ----- #
 # carousel_images = [
 #             {
