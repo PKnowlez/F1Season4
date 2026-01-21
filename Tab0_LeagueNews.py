@@ -8,7 +8,7 @@ from Articles import season4_track_overview, season4_schedule_reveal, season4_tr
                 season4_AustriaR_Recap, season4_Spa_Week, season4_Spa_FIA, season4_Spa_Recap, season4_Brazil_Week, \
                 season4_Brazil_FIA, season4_Brazil_Recap_Austria_Week, season4_Austria_Recap, season4_Zadnvoort_Week, \
                 season4_Zandvoort_Recap, season4_Standings_Rumors, season4_JeddahVegas_Recap, season4_Abu_Dhabi_Week, \
-                season4_AbuDhabi_Recap
+                season4_AbuDhabi_Recap, season4_Monza_Week
 
 def Tab0():
     if 'show_all_content' not in st.session_state:
@@ -16,7 +16,7 @@ def Tab0():
 
     #region --
 
-    season4_AbuDhabi_Recap.article()
+    season4_Monza_Week.article()
 
     #endregion
     
@@ -32,6 +32,8 @@ def Tab0():
             st.rerun()
 
     if st.session_state.show_all_content:
+
+        season4_AbuDhabi_Recap.article()
 
         season4_Abu_Dhabi_Week.article()
 
