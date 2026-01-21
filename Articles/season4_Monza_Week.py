@@ -21,7 +21,7 @@ def article():
 
                 On the constructor side of things, Mercedes simply needs to score 10 points, not including bonus points. If they do, VCARB is mathematically out of it. However, with bonus points in play, that bumps the threshold for a championship up to 14 points. So how can VCARB flip the script? To simplify the math, the following is all without bonus points.
                 
-                If VCARB finsihes 1-2 and Mercedes only scores 9 points, then the trophy goes their way. If VCARB finishes 1-3 and Mercedes scores 6 points, then the trophy goes their way. If VCARB finishes 2-3 and Mercedes DNFs, then it will be a tie on points. League officials are already discussing how to break a tie like this and have determined a few metrics to base it off of if the need arises.
+                If VCARB finishes 1-2 and Mercedes only scores 9 points, then the trophy goes their way. If VCARB finishes 1-3 and Mercedes scores 6 points, then the trophy goes their way. If VCARB finishes 2-3 and Mercedes DNFs, then it will be a tie on points. League officials are already discussing how to break a tie like this and have determined a few metrics to base it off of if the need arises.
                 ''')
     st.image(image)
     st.markdown('''
