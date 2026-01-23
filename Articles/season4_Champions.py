@@ -6,12 +6,12 @@ from PIL import Image
 def article():
     carousel_images = [
                 {
-                    "title": "Joshua Championship",
+                    "title": "",
                     "text": "",
                     "img": "./Images/Championship/JoshuaChampionship.png"
                 },
                 {
-                    "title": "Mercedes Championship",
+                    "title": "",
                     "text": "",
                     "img": "./Images/Championship/MercedesChampionship.png"
                 },
